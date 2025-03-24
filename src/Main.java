@@ -49,19 +49,19 @@ public class Main {
         if (ageA >=14) {
             System.out.println("Если возраст ребенка равен " + ageA + ", то ему можно кататься на аттракционе без сопровождения взрослого");
         }
-        System.out.println("задание6");
-        int places = 108;
-        int allPlaces =102;
-        int freePlaces = allPlaces-places;
-        int sitPlaces =60;
-        if (places <102 && places> 60){
-            System.out.println(" В вагоне " +freePlaces+ " стоячих мест");
+        final int TOTAL_CAPACITY = 102;
+        final int SEATS_CAPACITY = 60;
+        int passengersCount =102;
+        if (passengersCount <= SEATS_CAPACITY) {
+            System.out.println("Есть свободные сидячие места.");
+        } else if (passengersCount <= TOTAL_CAPACITY) {
+            System.out.println("Все сидячие места заняты, но есть стоячие места.");
+        } else {
+            System.out.println("Вагон полностью заполнен.");
         }
-        if (places<60){
-            System.out.println(" В вагоне " +(sitPlaces - places)+ "сидячих мест и " +( allPlaces-sitPlaces )+ " стоячих мест");
-        }else{
-            System.out.println(" мест нет");
-        }
+
+
+
 
         System.out.println("задание7");
         int one = 12;
